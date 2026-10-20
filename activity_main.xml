@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="MINECRAFT AUTO CLICKER"
+            android:textColor="#1B1B1B"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/mc_green" />
+
+        <!-- Trạng thái -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textColor="#1B1B1B"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnAccessibility"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_outline"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="MỞ CÀI ĐẶT TRỢ NĂNG"
+                android:textColor="#1B1B1B"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Auto click -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="AUTO CLICK"
+                android:textColor="@color/mc_green_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tốc độ click (mili giây, tối thiểu 20)"
+                android:textColor="@color/muted"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="7"
+                android:text="100"
+                android:textColor="#1B1B1B" />
+
+            <RadioGroup
+                android:id="@+id/rgMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbContinuous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Click liên tục"
+                    android:textColor="#1B1B1B" />
+
+                <RadioButton
+                    android:id="@+id/rbLimited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giới hạn số lần click"
+                    android:textColor="#1B1B1B" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Số lần click"
+                android:inputType="number"
+                android:maxLength="7"
+                android:text="100"
+                android:textColor="#1B1B1B" />
+
+            <TextView
+                android:id="@+id/btnOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_outline"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="HIỆN NÚT NỔI &amp; CHỌN VỊ TRÍ"
+                android:textColor="#1B1B1B"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnStart"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_green"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="BẮT ĐẦU"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnStop"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_red"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="DỪNG"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Cách dùng: bật Trợ năng → bấm HIỆN NÚT NỔI → kéo dấu + tới vị trí cần chạm → bấm BẮT ĐẦU trên nút nổi (hoặc trong app)."
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Đồng hồ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="ĐỒNG HỒ BẤM GIỜ"
+                android:textColor="@color/mc_green_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="00:00.00"
+                android:textColor="#1B1B1B"
+                android:textSize="44sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnSwStart"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_green"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="BẮT ĐẦU"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnSwPause"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_outline"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="TẠM DỪNG"
+                    android:textColor="#1B1B1B"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnSwReset"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_outline"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="ĐẶT LẠI"
+                    android:textColor="#1B1B1B"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbKeepAwake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Giữ màn hình sáng"
+                android:textColor="#1B1B1B" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

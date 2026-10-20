@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="ink">#1B1B1B</color>
+    <color name="mc_green">#55AA33</color>
+    <color name="mc_green_dark">#3B7A24</color>
+    <color name="mc_red">#C0392B</color>
+    <color name="mc_red_dark">#8E2A20</color>
+    <color name="line">#D9D9D9</color>
+    <color name="muted">#666666</color>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Minecraft Auto Clicker</string>
+    <string name="accessibility_description">Dịch vụ này chỉ dùng để thực hiện thao tác chạm tự động tại vị trí bạn chọn khi bạn bấm BẮT ĐẦU. Ứng dụng không đọc nội dung màn hình và không gửi dữ liệu ra ngoài.</string>
+</resources>
